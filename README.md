@@ -27,10 +27,10 @@ Rating
 Country  
 Technologies  
 
-You can create, get, update  and add Websites  
-You can create, get, update  and add Countrys  
-You can create, get, update  and add technologies  
-You can create, get, update  and add ratings  
+You can create, get, update  and delete Websites  
+You can create, get, update  and delete Countrys  
+You can create, get, update  and delete technologies  
+You can create, get, update  and delete ratings  
 
 A web site can only have one Country. 
 A web site can have many Technologies.
