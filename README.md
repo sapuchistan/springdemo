@@ -1,4 +1,4 @@
-# springdemo
+# Spring Learning Demo
 
 This is only a spring demo for learning purposes.   
 The main goal of the aplication was understand the SpringBoot basics.  
