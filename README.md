@@ -33,6 +33,6 @@ You can create, get, update  and add ratings
 
 A web site can only have one Country. 
 A web site can have many Technologies.
-The website rating is calculate when every new rating was added to the wbe site  using a simple aveage formula rounding to nearest int.
+The website rating is calculate when every new rating was added to the web site using a simple average formula rounding to the next nearest int.
 
 
