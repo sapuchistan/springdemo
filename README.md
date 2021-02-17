@@ -1,20 +1,20 @@
 # springdemo
 
-This is only a spring demo for learning purposes. 
-The main goal of the aplication was understand the SpringBoot basics
+This is only a spring demo for learning purposes.   
+The main goal of the aplication was understand the SpringBoot basics.  
 
-It includes the following:
+It includes the following:    
 
--JPA example for Postgres
--Hibernate annotations 
--Spring annotations like @Component @Service @RestController @RequestMappiong @ResponseBody @GetMapping
--Maven POM 
--Migration using flyway and SQL files
--Application Properties
--Log4 Properties
--Messages.Properties
+-JPA example for Postgres  
+-Hibernate annotations   
+-Spring annotations like @Component @Service @RestController @RequestMappiong @ResponseBody @GetMapping  
+-Maven POM   
+-Migration using flyway and SQL files  
+-Application Properties  
+-Log4 Properties  
+-Messages.Properties  
 
-The Main function is a basic approach to persists Website's info and a simple Rating system.
+The Main function is a basic approach to persists Website's info and a simple Rating system.  
 
 The Web site Model is:
 
