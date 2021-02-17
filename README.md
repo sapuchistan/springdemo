@@ -21,7 +21,7 @@ The Main function is a basic approach to persists Website's info and a simple Ra
 
 The Web site Model is:
 
-Name 
+Name   
 URL  
 Rating  
 Country  
