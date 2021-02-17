@@ -15,6 +15,7 @@ It includes the following:
 -Messages.Properties  
 -Pageable example  
 -Simple error handling  
+-Junit  
 
 The Main function is a basic approach to persists Website's info and a simple Rating system.  
 
