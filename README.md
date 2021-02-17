@@ -13,24 +13,26 @@ It includes the following:
 -Application Properties  
 -Log4 Properties  
 -Messages.Properties  
+-Pageable example  
+-Simple error handling  
 
 The Main function is a basic approach to persists Website's info and a simple Rating system.  
 
 The Web site Model is:
 
-Name
-URL
-Rating
-Country
-Technologies
+Name 
+URL  
+Rating  
+Country  
+Technologies  
 
-You can create, get, update  and add Websites
-You can create, get, update  and add Countrys
-You can create, get, update  and add technologies
-You can create, get, update  and add ratings
+You can create, get, update  and add Websites  
+You can create, get, update  and add Countrys  
+You can create, get, update  and add technologies  
+You can create, get, update  and add ratings  
 
-
-
-
+A web site can only have one Country. 
+A web site can have many Technologies.
+The website rating is calculate when every new rating was added to the wbe site  using a simple aveage formula rounding to nearest int.
 
 
