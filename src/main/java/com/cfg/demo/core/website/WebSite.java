@@ -1,5 +1,6 @@
 package com.cfg.demo.core.website;
 import com.cfg.demo.core.country.Country;
+import com.cfg.demo.core.rating.Rating;
 import com.cfg.demo.core.technology.Technology;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
@@ -29,11 +30,14 @@ public class WebSite {
     private long id;
 
     @NotEmpty
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
     @JoinTable(name = "ws_site_technology",
             joinColumns = { @JoinColumn(name = "id_site") },
             inverseJoinColumns = { @JoinColumn(name = "id_technology") })
     private Set<Technology> technologies = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy ="webSite")
+    private Set<Rating> ratings = new HashSet<>();
 
     @Column(name = "name")
     private String name;
@@ -47,6 +51,13 @@ public class WebSite {
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "id")
     private Country country;
+
+    @Column(name="ratingSum")
+    private Long ratingSum;
+
+    @Column(name="ratingCount")
+    private Long ratingCount;
+
 
     public long getId() {
         return id;
@@ -95,5 +106,35 @@ public class WebSite {
         this.technologies = technologies;
     }
 
+    public Set<Rating> getRatings() {
+        return ratings;
+    }
+    public void setRatings(Set<Rating> ratings) {
+        this.ratings = ratings;
+    }
 
+    public Long getRatingSum() {
+        return ratingSum;
+    }
+
+    public void setRatingSum(Long ratingSum) {
+        this.ratingSum = ratingSum;
+    }
+
+    public Long getRatingCount() {
+        return ratingCount;
+    }
+
+    public void setRatingCount(Long ratingCount) {
+        this.ratingCount = ratingCount;
+    }
+    public void addRating(Rating rating) {
+        ratings.add(rating);
+        setRatings(ratings);
+    }
+
+    public void removeRating(Rating rating) {
+        ratings.remove(rating);
+        setRatings(ratings);
+    }
 }

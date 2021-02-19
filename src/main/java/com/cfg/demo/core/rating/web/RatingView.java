@@ -1,9 +1,12 @@
 package com.cfg.demo.core.rating.web;
 
+import com.cfg.demo.core.website.WebSite;
+
 public class RatingView {
     private long id;
-    private int rating;
+    private long rating;
     private String comment;
+    private Long webSite;
 
     public long getId() {
         return id;
@@ -13,11 +16,11 @@ public class RatingView {
         this.id = id;
     }
 
-    public int getRating() {
+    public long getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(long rating) {
         this.rating = rating;
     }
 
@@ -27,5 +30,13 @@ public class RatingView {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Long getWebSite() {
+        return webSite;
+    }
+
+    public void setWebSite(Long webSite) {
+        this.webSite = webSite;
     }
 }

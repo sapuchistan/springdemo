@@ -15,6 +15,10 @@ public class WebSiteBaseReq extends BaseRequest {
     @NotEmpty
     private String url;
 
+    private Long ratingSum;
+
+    private Long RatingCount;
+
     private int rating;
 
     @NotNull
@@ -22,6 +26,9 @@ public class WebSiteBaseReq extends BaseRequest {
 
     @NotEmpty
     private List<@Valid Id> technology;
+
+    @NotEmpty
+    private List<@Valid Id> ratings;
 
 
     public String getName() {
@@ -62,5 +69,29 @@ public class WebSiteBaseReq extends BaseRequest {
 
     public void setTechnology(List<Id> technology) {
         this.technology = technology;
+    }
+
+    public Long getRatingSum() {
+        return ratingSum;
+    }
+
+    public void setRatingSum(Long ratingSum) {
+        this.ratingSum = ratingSum;
+    }
+
+    public Long getRatingCount() {
+        return RatingCount;
+    }
+
+    public void setRatingCount(Long ratingCount) {
+        RatingCount = ratingCount;
+    }
+
+    public List<Id> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<Id> ratings) {
+        this.ratings = ratings;
     }
 }

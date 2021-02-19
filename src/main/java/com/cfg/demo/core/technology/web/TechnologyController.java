@@ -1,8 +1,6 @@
 package com.cfg.demo.core.technology.web;
 
-import com.cfg.demo.core.country.Country;
-import com.cfg.demo.core.country.web.CountryBaseReq;
-import com.cfg.demo.core.country.web.CountryView;
+
 import com.cfg.demo.core.technology.Technology;
 import com.cfg.demo.core.technology.TechnologyService;
 import org.springframework.data.domain.Page;

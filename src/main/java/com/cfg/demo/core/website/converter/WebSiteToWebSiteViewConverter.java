@@ -1,5 +1,8 @@
 package com.cfg.demo.core.website.converter;
 
+import com.cfg.demo.core.rating.Rating;
+import com.cfg.demo.core.rating.converter.RatingToRatingView;
+import com.cfg.demo.core.rating.web.RatingView;
 import com.cfg.demo.core.technology.Technology;
 import com.cfg.demo.core.technology.converter.TechnologyToTechnologyView;
 import com.cfg.demo.core.technology.web.TechnologyView;
@@ -16,9 +19,11 @@ import java.util.Set;
 public class WebSiteToWebSiteViewConverter  implements Converter<WebSite, WebSiteView> {
 
     private TechnologyToTechnologyView technologyToTechnologyView;
+    private RatingToRatingView ratingToRatingView;
 
-    public WebSiteToWebSiteViewConverter(TechnologyToTechnologyView technologyToTechnologyView) {
+    public WebSiteToWebSiteViewConverter(TechnologyToTechnologyView technologyToTechnologyView, RatingToRatingView ratingToRatingView) {
         this.technologyToTechnologyView = technologyToTechnologyView;
+        this.ratingToRatingView = ratingToRatingView;
     }
 
     @Override
@@ -28,6 +33,8 @@ public class WebSiteToWebSiteViewConverter  implements Converter<WebSite, WebSit
         view.setName(website.getName());
         view.setUrl(website.getUrl());
         view.setCountry(website.getCountry());
+        view.setRatingCount(website.getRatingCount());
+        view.setRatingSum(website.getRatingSum());
         view.setRating(website.getRating());
         Set<TechnologyView> technologyViews = new HashSet<>();
         Set<Technology> technologies = website.getTechnologies();
@@ -36,6 +43,13 @@ public class WebSiteToWebSiteViewConverter  implements Converter<WebSite, WebSit
             technologyViews.add(technologyView);
         });
         view.setTechnologies(technologyViews);
+        Set<RatingView> ratingViews = new HashSet<>();
+        Set<Rating> ratings = website.getRatings();
+        ratings.forEach(rating -> {
+            RatingView ratingView =ratingToRatingView.convert(rating);
+            ratingViews.add(ratingView);
+        });
+        view.setRatings(ratingViews);
         return view;
     }
 }

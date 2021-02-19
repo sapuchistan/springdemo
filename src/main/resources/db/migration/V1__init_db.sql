@@ -9,8 +9,10 @@ CREATE TABLE ws_website (
   id int8 NOT NULL DEFAULT nextval('ws_website_id_seq'),
   name VARCHAR (255),
   url VARCHAR (255),
+  rating_count int8,
+  rating_sum int8,
   rating int4,
-  id_country VARCHAR (255),
+  id_country int8,
   PRIMARY KEY (id));
 
 
@@ -48,8 +50,6 @@ CREATE TABLE ws_technology (
   description VARCHAR(255),
   PRIMARY KEY(id));
 
-
-
   CREATE SEQUENCE ws_rating_id_seq
       START WITH 1
       INCREMENT BY 1
@@ -59,16 +59,10 @@ CREATE TABLE ws_technology (
 
   CREATE TABLE ws_rating (
     id int8 NOT NULL DEFAULT nextval('ws_rating_id_seq'),
+    web_site_id int8 NOT NULL,
     rating  int8 NOT NULL,
-    comment NOT NULL VARCHAR(255),
+    comment VARCHAR(255) NOT NULL ,
     PRIMARY KEY(id));
-
-    CREATE TABLE ws_site_rating (
-      id_site int8 NOT NULL ,
-      id_rating int8 NOT NULL ,
-      PRIMARY KEY (id_site, id_rating));
-
-
 
   CREATE TABLE ws_site_technology (
     id_site int8 NOT NULL ,

@@ -1,6 +1,7 @@
 package com.cfg.demo.core.website.web;
 
 import com.cfg.demo.core.country.Country;
+import com.cfg.demo.core.rating.web.RatingView;
 import com.cfg.demo.core.technology.web.TechnologyView;
 
 import java.util.HashSet;
@@ -13,11 +14,17 @@ public class WebSiteView {
 
     private String url;
 
+    private long ratingSum;
+
+    private long ratingCount;
+
     private int rating;
 
     private Country country;
 
     private Set<TechnologyView> technologies = new HashSet<>();
+
+    private Set<RatingView> ratings = new HashSet<>();
 
     public long getId() {
         return id;
@@ -65,5 +72,29 @@ public class WebSiteView {
 
     public void setTechnologies(Set<TechnologyView> technologies) {
         this.technologies = technologies;
+    }
+
+    public Set<RatingView> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(Set<RatingView> ratings) {
+        this.ratings = ratings;
+    }
+
+    public long getRatingSum() {
+        return ratingSum;
+    }
+
+    public void setRatingSum(long ratingSum) {
+        this.ratingSum = ratingSum;
+    }
+
+    public long getRatingCount() {
+        return ratingCount;
+    }
+
+    public void setRatingCount(long ratingCount) {
+        this.ratingCount = ratingCount;
     }
 }

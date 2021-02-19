@@ -1,13 +1,13 @@
 # Spring Learning Demo
 
 This is only a spring demo for learning purposes.   
-The main goal of the aplication was understand the SpringBoot basics.  
+The main goal of the project was understood the SpringBoot basics.  
 
 It includes the following:    
 
 -JPA example for Postgres  
 -Hibernate annotations   
--Spring annotations like @Component @Service @RestController @RequestMappiong @ResponseBody @GetMapping  
+-Spring annotations like @Component @Service @RestController @RequestMapping @ResponseBody @GetMapping  
 -Maven POM   
 -Migration using flyway and SQL files  
 -Application Properties  
@@ -19,7 +19,7 @@ It includes the following:
 
 The Main function is a basic approach to persists Website's info and a simple Rating system.  
 
-The Web site Model is:
+The Website Model is:
 
 Name   
 URL  
@@ -28,12 +28,12 @@ Country
 Technologies  
 
 You can create, get, update  and delete Websites  
-You can create, get, update  and delete Countrys  
+You can create, get, update  and delete Country's  
 You can create, get, update  and delete technologies  
 You can create, get, update  and delete ratings  
 
-A web site can only have one Country. 
-A web site can have many Technologies.
-The website rating is calculate when every new rating was added to the web site using a simple average formula rounding to the next nearest int.
+A website can only have one Country. 
+A website can have many Technologies.
+The website rating is calculated when every new rating was added to a specific website using a simple average formula rounded to the nearest int.
 
 

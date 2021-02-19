@@ -13,12 +13,12 @@ VALUES
 ('HTML','programming language'),
 ('CSS','programming language');
 
-INSERT INTO  ws_website  (name,url,rating,id_country)
+INSERT INTO  ws_website  (name,url,rating_count,rating_sum,rating,id_country)
 VALUES
-('economicompras','www.economicompras.com',5,1),
-('appcomercio','www.apcomercio.com',3,1),
-('Shani BellyDance Studio','www.shanibellydance.com',3,1),
-('Mercado Libre','www.mercadolibre.com',3,1);
+('economicompras','www.economicompras.com',0,0,0,3),
+('appcomercio','www.apcomercio.com',0,0,0,1),
+('Shani BellyDance Studio','www.shanibellydance.com',0,0,0,1),
+('Mercado Libre','www.mercadolibre.com',0,0,0,1);
 
 INSERT INTO  ws_country  (name)
 VALUES

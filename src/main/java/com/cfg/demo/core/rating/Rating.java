@@ -1,5 +1,6 @@
 package com.cfg.demo.core.rating;
 
+import com.cfg.demo.core.website.WebSite;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -24,10 +25,14 @@ public class Rating {
     private long id;
 
     @Column (name="rating")
-    private int rating;
+    private Long rating;
 
     @Column (name="comment")
     private String comment;
+
+    @ManyToOne
+    @JoinColumn(name="web_site_id")
+    private WebSite webSite;
 
     public long getId() {
         return id;
@@ -37,11 +42,11 @@ public class Rating {
         this.id = id;
     }
 
-    public int getRating() {
+    public Long getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Long rating) {
         this.rating = rating;
     }
 
@@ -51,5 +56,13 @@ public class Rating {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public WebSite getWebSite() {
+        return webSite;
+    }
+
+    public void setWebSite(WebSite webSite) {
+        this.webSite = webSite;
     }
 }

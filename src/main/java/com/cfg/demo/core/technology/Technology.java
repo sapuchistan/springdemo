@@ -28,9 +28,6 @@ public class Technology {
     private long id;
 
 
-
-
-
     @Column(name = "name")
     private String name;
 

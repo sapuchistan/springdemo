@@ -4,13 +4,16 @@ import com.cfg.demo.base.BaseRequest;
 
 import javax.validation.constraints.NotEmpty;
 
-public class RatingBaseReq extends BaseRequest {
+public class RatingBaseReq extends BaseRequest  {
 
     @NotEmpty
     private String comment;
 
     @NotEmpty
-    private int rating;
+    private Long rating;
+
+    @NotEmpty
+    private Long websiteId;
 
     public String getComment() {
         return comment;
@@ -20,11 +23,19 @@ public class RatingBaseReq extends BaseRequest {
         this.comment = comment;
     }
 
-    public int getRating() {
+    public Long getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Long rating) {
         this.rating = rating;
+    }
+
+    public Long getWebsiteId() {
+        return websiteId;
+    }
+
+    public void setWebsiteId(Long websiteId) {
+        this.websiteId = websiteId;
     }
 }
